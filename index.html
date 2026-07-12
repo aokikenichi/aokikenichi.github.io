@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kenichi Aoki | Index</title>
+  <meta name="description" content="青木健一の活動ポータル。AI、社会シミュレーション、データ、クリケット文化、研究、執筆、創作。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Kenichi Aoki | Index">
+  <meta property="og:description" content="Curiosity drives insight. Insight drives impact. Think. Model. Act.">
+  <meta property="og:image" content="assets/img/ken-header.png">
+  <meta name="theme-color" content="#f4f0e8">
+
+  <style>
+    :root{
+      --bg:#f3f0e8;
+      --paper:#fffdf9;
+      --ink:#171918;
+      --muted:#68706c;
+      --line:#d7d1c5;
+      --blue:#174f9d;
+      --blue2:#2d6ec6;
+      --teal:#0f6860;
+      --red:#a7483b;
+      --dark:#101820;
+      --max:1220px;
+      --radius:24px;
+      --shadow:0 18px 44px rgba(18,27,34,.09);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        linear-gradient(rgba(23,25,24,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23,25,24,.035) 1px, transparent 1px),
+        var(--bg);
+      background-size:30px 30px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      line-height:1.75;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;height:auto}
+    .container{width:min(calc(100% - 36px),var(--max));margin-inline:auto}
+
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(243,240,232,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(215,209,197,.95);
+    }
+
+    .header-inner{
+      min-height:72px;
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+
+    .brand{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.08rem;
+      letter-spacing:.06em;
+    }
+
+    nav ul{
+      margin:0;padding:0;list-style:none;
+      display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end;
+    }
+
+    nav a{font-size:.9rem;color:var(--muted)}
+    nav a:hover{color:var(--blue)}
+
+    .hero{padding:34px 0 76px}
+
+    .hero-image{
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:var(--paper);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-image img{
+      aspect-ratio:3/1;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .hero-copy{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:54px;
+      align-items:end;
+      padding-top:34px;
+    }
+
+    .eyebrow{
+      color:var(--blue);
+      font-size:.76rem;
+      letter-spacing:.14em;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:10px 0 14px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.8rem,7vw,6rem);
+      line-height:.95;
+      font-weight:500;
+      letter-spacing:-.03em;
+    }
+
+    .lead{
+      margin:0;
+      max-width:44rem;
+      color:#39413e;
+      font-size:clamp(1.04rem,2vw,1.28rem);
+    }
+
+    .manifesto{
+      border-top:1px solid var(--ink);
+      padding-top:18px;
+    }
+
+    .manifesto strong{
+      display:block;
+      margin-bottom:8px;
+      color:var(--ink);
+    }
+
+    .manifesto p{margin:0;color:var(--muted)}
+
+    section{padding:70px 0}
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:28px;
+      margin-bottom:26px;
+    }
+
+    h2{
+      margin:8px 0 0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,4vw,3.5rem);
+      font-weight:500;
+      line-height:1.1;
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:42rem;
+      color:var(--muted);
+    }
+
+    .about{
+      background:rgba(255,253,249,.55);
+      border-block:1px solid var(--line);
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:26px;
+      align-items:stretch;
+    }
+
+    .about-visual,
+    .about-copy{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:var(--paper);
+    }
+
+    .about-visual img{
+      height:100%;
+      min-height:520px;
+      object-fit:cover;
+    }
+
+    .about-copy{
+      padding:36px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .about-copy p{margin:0 0 16px;color:#3d4541}
+    .about-copy .signature{
+      margin-top:8px;
+      font-size:1.15rem;
+      font-weight:800;
+      color:var(--blue);
+    }
+
+    .interests{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:18px;
+    }
+
+    .chip{
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#faf8f2;
+      font-size:.82rem;
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .project{
+      position:relative;
+      overflow:hidden;
+      min-height:520px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:var(--paper);
+      box-shadow:0 10px 30px rgba(20,30,28,.06);
+      transition:.22s ease;
+    }
+
+    .project:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+
+    .project img{
+      height:100%;
+      min-height:520px;
+      object-fit:cover;
+    }
+
+    .project .shade{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,transparent 35%,rgba(10,16,18,.82) 100%);
+    }
+
+    .project-copy{
+      position:absolute;
+      inset:auto 0 0;
+      padding:30px;
+      color:white;
+    }
+
+    .project-copy .label{
+      font-size:.73rem;
+      letter-spacing:.14em;
+      font-weight:800;
+      opacity:.82;
+    }
+
+    .project-copy h3{
+      margin:8px 0 10px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,4vw,3.2rem);
+      font-weight:500;
+      line-height:1.08;
+    }
+
+    .project-copy p{
+      margin:0 0 18px;
+      max-width:34rem;
+      color:rgba(255,255,255,.88);
+    }
+
+    .project-copy .cta{font-weight:800}
+
+    .visual-band{
+      display:grid;
+      grid-template-columns:1.3fr .7fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .visual-band .image-card{
+      overflow:hidden;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:var(--paper);
+    }
+
+    .visual-band .image-card img{
+      height:100%;
+      min-height:420px;
+      object-fit:cover;
+    }
+
+    .quote-card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--paper);
+      padding:34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .quote-card blockquote{
+      margin:0 0 22px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.7rem,3.5vw,2.8rem);
+      line-height:1.18;
+      color:var(--dark);
+    }
+
+    .quote-card p{margin:0;color:var(--muted)}
+
+    .links-section{
+      background:rgba(255,253,249,.55);
+      border-block:1px solid var(--line);
+    }
+
+    .link-groups{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .link-group{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:var(--paper);
+      padding:24px;
+    }
+
+    .link-group h3{
+      margin:0 0 14px;
+      font-size:1.12rem;
+    }
+
+    .link-list{
+      display:grid;
+      gap:10px;
+    }
+
+    .link-item{
+      display:block;
+      padding:12px 0;
+      border-top:1px solid var(--line);
+    }
+
+    .link-item:first-child{border-top:0}
+
+    .link-item strong{
+      display:block;
+      color:var(--blue);
+    }
+
+    .link-item span{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .link-item:hover strong{text-decoration:underline}
+
+    .research-banner{
+      margin-top:26px;
+      overflow:hidden;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:var(--paper);
+    }
+
+    .research-banner img{
+      aspect-ratio:16/6;
+      object-fit:cover;
+    }
+
+    footer{
+      padding:42px 0 56px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:940px){
+      nav{display:none}
+      .hero-copy,
+      .about-grid,
+      .projects-grid,
+      .visual-band{
+        grid-template-columns:1fr;
+      }
+      .link-groups{grid-template-columns:1fr 1fr}
+      .about-visual img{min-height:380px}
+      .project{min-height:460px}
+      .project img{min-height:460px}
+    }
+
+    @media(max-width:620px){
+      .hero{padding-top:18px}
+      .hero-image{border-radius:18px}
+      .hero-image img{aspect-ratio:3/1}
+      .link-groups{grid-template-columns:1fr}
+      section{padding:52px 0}
+      .about-copy{padding:26px}
+      .project-copy{padding:24px}
+      .section-head{align-items:start;flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">Kenichi Aoki</a>
+      <nav aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="https://github.com/aokikenichi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-image">
+          <img src="assets/img/ken-header.png" alt="Ken、AI、世界モデル、因果推論、実験をテーマにしたヘッダーイラスト">
+        </div>
+
+        <div class="hero-copy">
+          <div>
+            <div class="eyebrow">@aokikenichi の Index</div>
+            <h1>Think.<br>Model. Act.</h1>
+            <p class="lead">
+              Curiosity drives insight. Insight drives impact.
+            </p>
+          </div>
+
+          <div class="manifesto">
+            <strong>⚡ Fun fact: ...自己紹介。</strong>
+            <p>
+              本物は、やる気、元気、青木、の青木健一55歳です。
+              IT企業のR＆D部門にて、AI周りの動向調査、技術検証などをしております。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">About</div>
+            <h2>Curiosity across domains.</h2>
+          </div>
+          <p>
+            AI、社会、データ、脳、感情、文化。分野をまたぎながら、
+            「考える → モデル化する → 試す」を続けています。
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual">
+            <img src="assets/img/creative-thinking.png" alt="AI、データ、クリケット、都市を横断して考える現代的ペン画">
+          </div>
+
+          <div class="about-copy">
+            <p>
+              IT企業のR＆D部門にて、AI周りの動向調査、技術検証などをしております。
+              今の関心は世界モデル、社会シミュラクラ、因果推論、ネットワーク科学、
+              脳神経科学、Affective Computing、などです。
+            </p>
+
+            <p>
+              研究だけでなく、プロンプト、社会シミュレーション、可視化、漫画、小説、
+              クリケット文化づくりなど、気になったものはまず作って公開するスタイルです。
+            </p>
+
+            <div class="signature">Curiosity drives insight. Insight drives impact.</div>
+
+            <div class="interests">
+              <span class="chip">World Models</span>
+              <span class="chip">Social Simulacra</span>
+              <span class="chip">Causal Inference</span>
+              <span class="chip">Network Science</span>
+              <span class="chip">Neuroscience</span>
+              <span class="chip">Affective Computing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Featured Projects</div>
+            <h2>Two worlds, one curiosity.</h2>
+          </div>
+          <p>
+            社会を観測するプロジェクトと、クリケット文化を育てるプロジェクト。
+            一見異なる二つを、同じ好奇心から進めています。
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <a class="project" href="https://aokikenichi.github.io/CRITT/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/cricket-culture.png" alt="日本にクリケット文化とコミュニティが根付く様子を描いたペン画">
+            <span class="shade"></span>
+            <div class="project-copy">
+              <div class="label">CRICKET / STORIES / DATA / COMMUNITY</div>
+              <h3>CRITT</h3>
+              <p>
+                クリケットを、物語とAIでひらく。
+                漫画、小説、選手、試合、データ分析、ファン交流をつなぐクリケットファンサイト。
+              </p>
+              <div class="cta">VISIT CRITT →</div>
+            </div>
+          </a>
+
+          <a class="project" href="https://aokikenichi.github.io/SocialSimulacraSocialObservatory/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/two-worlds.png" alt="社会シミュレーションとクリケット文化という二つの世界を好奇心でつなぐペン画">
+            <span class="shade"></span>
+            <div class="project-copy">
+              <div class="label">LLM-BASED SOCIAL SIMULATION / OBSERVATION</div>
+              <h3>社会シミュラクラ観測所</h3>
+              <p>
+                「他ではないようなプロンプト集」の発展として、
+                社会シミュラクラを気軽に体験し、広めようという試みです。
+              </p>
+              <div class="cta">ENTER OBSERVATORY →</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container visual-band">
+        <div class="image-card">
+          <img src="assets/img/urban-thinking.png" alt="都市、AI、データ、クリケット、思索を重ねた現代的ペン画">
+        </div>
+        <div class="quote-card">
+          <div class="eyebrow">Independent Practice</div>
+          <blockquote>Build first.<br>Think in public.</blockquote>
+          <p>
+            アカデミアの人間ではなく、大学も学部まで。
+            それでもやっていいらしいので、独立系研究者を名乗っています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section" id="links">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Index</div>
+            <h2>Where to find me.</h2>
+          </div>
+          <p>
+            研究、技術、文章、読書、音楽、大喜利まで。
+            いろいろな場所で活動しています。
+          </p>
+        </div>
+
+        <div class="link-groups">
+          <div class="link-group">
+            <h3>Projects & GitHub</h3>
+            <div class="link-list">
+              <a class="link-item" href="https://github.com/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>GitHub / @aokikenichi</strong>
+                <span>コード、実験、公開プロジェクト。</span>
+              </a>
+              <a class="link-item" href="https://aokikenichi.github.io/CRITT/" target="_blank" rel="noopener noreferrer">
+                <strong>CRITT</strong>
+                <span>クリケットを、物語とAIでひらく。</span>
+              </a>
+              <a class="link-item" href="https://aokikenichi.github.io/SocialSimulacraSocialObservatory/" target="_blank" rel="noopener noreferrer">
+                <strong>社会シミュラクラ観測所</strong>
+                <span>LLMベース社会シミュレーションを気軽に体験する試み。</span>
+              </a>
+              <a class="link-item" href="https://github.com/aokikenichi/Prompts" target="_blank" rel="noopener noreferrer">
+                <strong>他ではないようなプロンプト集</strong>
+                <span>メタプロンプト、短歌、作画など。</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="link-group">
+            <h3>Writing & Communication</h3>
+            <div class="link-list">
+              <a class="link-item" href="https://twitter.com/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>X / Twitter</strong>
+                <span>AI周りや活動の成果など。連絡もこちらが早めです。</span>
+              </a>
+              <a class="link-item" href="https://qiita.com/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>Qiita</strong>
+                <span>機械学習やAIを中心に技術記事を公開。</span>
+              </a>
+              <a class="link-item" href="https://note.com/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>note</strong>
+                <span>マーケティング、独学、創作など。</span>
+              </a>
+              <a class="link-item" href="https://teratail.com/users/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>teratail</strong>
+                <span>データ分析を中心にQ&Aへ回答。</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="link-group">
+            <h3>Research & Professional</h3>
+            <div class="link-list">
+              <a class="link-item" href="https://lapras.com/public/KQSRYAC" target="_blank" rel="noopener noreferrer">
+                <strong>LAPRAS</strong>
+                <span>技術者スコアリング＆プロフィール。</span>
+              </a>
+              <a class="link-item" href="https://scholar.google.co.jp/citations?user=uOhHAFsAAAAJ" target="_blank" rel="noopener noreferrer">
+                <strong>Google Scholar</strong>
+                <span>独立系研究者としての公開プロフィール。</span>
+              </a>
+              <a class="link-item" href="https://orcid.org/0009-0000-4084-2278" target="_blank" rel="noopener noreferrer">
+                <strong>ORCID</strong>
+                <span>0009-0000-4084-2278</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="link-group">
+            <h3>Books & Curation</h3>
+            <div class="link-list">
+              <a class="link-item" href="https://booklog.jp/users/aokikenichi/profile" target="_blank" rel="noopener noreferrer">
+                <strong>BookLog / aokikenichi</strong>
+                <span>技術書、政治経済、小説など。年365冊読了が目標。</span>
+              </a>
+              <a class="link-item" href="https://www.amazon.co.jp/shop/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>Amazon Store Front</strong>
+                <span>本を紹介する仮想個人店舗。</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="link-group">
+            <h3>Play & Experiment</h3>
+            <div class="link-list">
+              <a class="link-item" href="https://oogiri.app/user/3ee30df9d89259a7a2d4d24a" target="_blank" rel="noopener noreferrer">
+                <strong>無限大喜利</strong>
+                <span>大喜利サイトにも参加。</span>
+              </a>
+              <a class="link-item" href="https://suno.com/@unifyingharpist884" target="_blank" rel="noopener noreferrer">
+                <strong>Suno</strong>
+                <span>音楽作成中。</span>
+              </a>
+              <a class="link-item" href="https://lit.link/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>Lit.Link / aokikenichi</strong>
+                <span>新しいものはなんでもやっていくスタイル。</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="link-group">
+            <h3>Archive</h3>
+            <div class="link-list">
+              <a class="link-item" href="https://github.com/aokikenichi/freak_data_analysis" target="_blank" rel="noopener noreferrer">
+                <strong>ヤバいデータ分析</strong>
+                <span>データ分析で間違えやすい点をまとめた試み。</span>
+              </a>
+              <a class="link-item" href="https://zenn.dev/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>Zenn</strong>
+                <span>技術記事のアーカイブ。</span>
+              </a>
+              <a class="link-item" href="https://speakerdeck.com/aokikenichi" target="_blank" rel="noopener noreferrer">
+                <strong>Speaker Deck</strong>
+                <span>過去の発表スライド。</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-banner">
+          <img src="assets/img/learning-to-field.png" alt="学びと技術開発から、クリケットの競技場と世界へ向かう道を描いたペン画">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© Kenichi Aoki</span>
+      <span>AI / Data / Social Simulation / Cricket Culture / Independent Research</span>
+    </div>
+  </footer>
+</body>
+</html>
