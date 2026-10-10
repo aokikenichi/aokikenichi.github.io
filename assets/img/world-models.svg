@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200">
+<title>世界モデル：観測、予測、シミュレーション、行動</title>
+<defs>
+ <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#f0eadc"/><stop offset="1" stop-color="#cbcabb"/></linearGradient>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c5dbd5"/><stop offset="1" stop-color="#dce3d7"/></linearGradient>
+ <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#9cb9a4"/><stop offset="1" stop-color="#496d67"/></linearGradient>
+ <pattern id="dots" width="27" height="27" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r="1" fill="#64746c" opacity=".25"/></pattern>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#6a857e" stroke-width="1" opacity=".15"/></pattern>
+ <marker id="end" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#426d78" stroke-width="1.7"/></marker>
+</defs>
+<rect width="960" height="1200" fill="url(#paper)"/><rect width="960" height="1200" fill="url(#dots)"/>
+<!-- imagined futures -->
+<ellipse cx="485" cy="427" rx="402" ry="330" fill="url(#sky)" opacity=".65" stroke="#7d9587" stroke-width="4"/>
+<ellipse cx="485" cy="427" rx="402" ry="330" fill="url(#grid)" opacity=".5"/>
+<path d="M85 434Q476 230 886 440M84 435Q470 651 886 435M485 99Q290 430 485 756M485 99Q680 430 485 756" fill="none" stroke="#7b9c94" stroke-width="2" stroke-dasharray="10 11" opacity=".65"/>
+<!-- world in the imagination -->
+<path d="M86 510L186 370L270 459L387 297L483 480L593 348L714 482L806 411L885 526V610H86Z" fill="#b4c8b5" stroke="#668779" stroke-width="4"/>
+<path d="M351 349l36-52 44 68m132 17 30-34 47 61" fill="none" stroke="#efe9d8" stroke-width="12"/>
+<path d="M113 583C239 531 319 594 425 544S619 526 731 570S841 579 875 568" fill="none" stroke="#6eabb1" stroke-width="33" stroke-linecap="round"/>
+<path d="M114 583C239 531 319 594 425 544S619 526 731 570S841 579 875 568" fill="none" stroke="#e0ede7" stroke-width="3" stroke-dasharray="7 8"/>
+<g stroke="#6c7770" stroke-width="3" stroke-linejoin="round">
+ <path d="M262 496v-102h54v102z" fill="#cdbb98"/><path d="M262 394l28-35h57l-31 35z" fill="#e9d4b5"/><path d="M316 394l31-35v98l-31 39z" fill="#9eac9c"/>
+ <path d="M683 514v-89h48v89z" fill="#d3bc94"/><path d="M683 425l29-29h51l-32 29z" fill="#e2d2b4"/><path d="M731 425l32-29v89l-32 29z" fill="#9baea3"/>
+ <path d="M777 542v-135h35v135z" fill="#cdb59a"/>
+</g>
+<g fill="#7b9e86" stroke="#577b72" stroke-width="4"><path d="M186 539v-80m-42 17q41-92 84-2m-82 23q40-80 80 0"/><path d="M584 558v-95m-45 31q42-86 91-2m-91 30q45-78 91 0"/></g>
+<!-- mental model nodes -->
+<g stroke="#4c767d" stroke-width="3" fill="none" opacity=".9"><path d="M157 250L244 184L365 227L486 155L592 218L757 190"/><path d="M244 184L307 119L486 155L592 218L665 115"/><path d="M365 227L416 282L592 218"/></g>
+<g fill="#e1bf8f" stroke="#547879" stroke-width="3"><circle cx="157" cy="250" r="14"/><circle cx="244" cy="184" r="12"/><circle cx="365" cy="227" r="15"/><circle cx="486" cy="155" r="18"/><circle cx="592" cy="218" r="13"/><circle cx="757" cy="190" r="15"/><circle cx="307" cy="119" r="9"/><circle cx="665" cy="115" r="10"/><circle cx="416" cy="282" r="11"/></g>
+<!-- anticipated actions, planned paths -->
+<path d="M115 649Q261 714 390 634T628 633T851 585" fill="none" stroke="#c68b62" stroke-width="10" stroke-dasharray="16 15" marker-end="url(#end)"/>
+<g fill="#f4e9cf" stroke="#a27c59" stroke-width="3"><circle cx="117" cy="649" r="16"/><circle cx="390" cy="634" r="15"/><circle cx="627" cy="633" r="14"/></g>
+<!-- left robot looking up into the world -->
+<ellipse cx="260" cy="1051" rx="216" ry="47" fill="#55645a" opacity=".18"/>
+<path d="M174 875Q160 824 245 795Q370 785 390 882L381 1021Q264 1087 145 1024Z" fill="#d7d1bc" stroke="#48565a" stroke-width="6"/>
+<path d="M173 979q104 61 210 3" fill="none" stroke="#99a499" stroke-width="9"/>
+<path d="M166 904q-64 10-74 84l61 29 23-44-31-10 36-22M383 902q64 11 71 79l-55 33-19-42 34-15-37-21" fill="#b7c3b7" stroke="#48565a" stroke-width="6" stroke-linejoin="round"/>
+<path d="M181 1020l-43 46 106 38 36-45M326 1033l42 36 107-35-41-39" fill="#a9b4a9" stroke="#48565a" stroke-width="6" stroke-linejoin="round"/>
+<path d="M141 773Q130 676 242 654Q367 639 383 755Q389 865 262 888Q148 887 141 773Z" fill="#e7e1ca" stroke="#48565a" stroke-width="7"/>
+<path d="M193 755Q205 706 274 700Q354 707 356 761Q352 832 272 835Q195 827 193 755Z" fill="#638e93" stroke="#486267" stroke-width="6"/>
+<ellipse cx="287" cy="769" rx="32" ry="38" fill="#263e49"/><circle cx="300" cy="753" r="12" fill="#d0e5e5"/><path d="M203 801Q231 825 257 817" fill="none" stroke="#d7e5d9" stroke-width="5"/>
+<circle cx="158" cy="749" r="12" fill="#d7a67c" stroke="#48565a" stroke-width="4"/>
+<!-- flow between embodied world and prediction -->
+<g stroke="#456f7c" stroke-width="4" fill="none" stroke-dasharray="12 10" marker-end="url(#end)">
+ <path d="M393 850C471 799 501 748 495 686"/>
+ <path d="M653 737C776 812 803 898 792 958"/>
+</g>
+<!-- planning target -->
+<g stroke="#597c7b" stroke-width="3" fill="none"><circle cx="756" cy="992" r="94"/><circle cx="756" cy="992" r="59"/><circle cx="756" cy="992" r="27"/><path d="M662 992h188M756 898v188"/></g>
+<circle cx="756" cy="992" r="14" fill="#cc9466"/>
+<path d="M527 1138h330M528 1155h215" stroke="#637b72" stroke-width="4" opacity=".45"/>
+</svg>
