@@ -216,7 +216,7 @@
 
     .projects-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:22px;
     }
 
@@ -390,6 +390,10 @@
       flex-wrap:wrap;
     }
 
+    @media(max-width:1140px) and (min-width:941px){
+      .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
     @media(max-width:940px){
       nav{display:none}
       .hero-copy,
@@ -509,15 +513,28 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Featured Projects</div>
-            <h2>Two worlds, one curiosity.</h2>
+            <h2>Different worlds, one curiosity.</h2>
           </div>
           <p>
-            社会を観測するプロジェクトと、クリケット文化を育てるプロジェクト。
-            一見異なる二つを、同じ好奇心から進めています。
+            世界をモデル化すること、社会をシミュレーションすること、
+            クリケット文化を育てること。異なる領域を、同じ好奇心から進めています。
           </p>
         </div>
 
         <div class="projects-grid">
+          <a class="project" href="https://github.com/aokikenichi/WorldModels" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/world-models.svg" alt="観測、予測、シミュレーションと行動計画を描いた世界モデルのイラスト">
+            <span class="shade"></span>
+            <div class="project-copy">
+              <div class="label">WORLD MODELS / PREDICTION / PLANNING</div>
+              <h3>World Models</h3>
+              <p>
+                世界モデルを知り、作り、使う。基本概念、研究史からミニ実装、Physical AIへの応用までを日本語で解説する入門プロジェクト。
+              </p>
+              <div class="cta">EXPLORE WORLD MODELS →</div>
+            </div>
+          </a>
+
           <a class="project" href="https://aokikenichi.github.io/CRITT/" target="_blank" rel="noopener noreferrer">
             <img src="assets/img/cricket-culture.png" alt="日本にクリケット文化とコミュニティが根付く様子を描いたペン画">
             <span class="shade"></span>
@@ -586,6 +603,10 @@
                 <strong>GitHub / @aokikenichi</strong>
                 <span>コード、実験、公開プロジェクト。</span>
               </a>
+              <a class="link-item" href="https://github.com/aokikenichi/WorldModels" target="_blank" rel="noopener noreferrer">
+                <strong>世界モデル入門</strong>
+                <span>世界モデルの基礎、研究史、ミニ実装、Physical AIへの応用を解説する日本語入門資料。</span>
+              </a>
               <a class="link-item" href="https://aokikenichi.github.io/CRITT/" target="_blank" rel="noopener noreferrer">
                 <strong>CRITT</strong>
                 <span>クリケットを、物語とAIでひらく。</span>
@@ -594,7 +615,11 @@
                 <strong>社会シミュラクラ観測所</strong>
                 <span>LLMベース社会シミュレーションを気軽に体験する試み。</span>
               </a>
-              <a class="link-item" href="https://github.com/aokikenichi/Prompts" target="_blank" rel="noopener noreferrer">
+              <a class="link-item" href="https://github.com/aokikenichi/FrameSwitcherDynamics" target="_blank" rel="noopener noreferrer">
+                <strong>FrameSwitcherDynamics</strong>
+                <span>危機に対する認識と政策判断の変化を、LLMエージェントでシミュレーション・可視化した実験。</span>
+              </a>
+              <a class="link-item" href="https://github.com/aokikenichi/prompts" target="_blank" rel="noopener noreferrer">
                 <strong>他ではないようなプロンプト集</strong>
                 <span>メタプロンプト、短歌、作画など。</span>
               </a>
@@ -679,6 +704,14 @@
               <a class="link-item" href="https://github.com/aokikenichi/freak_data_analysis" target="_blank" rel="noopener noreferrer">
                 <strong>ヤバいデータ分析</strong>
                 <span>データ分析で間違えやすい点をまとめた試み。</span>
+              </a>
+              <a class="link-item" href="https://github.com/aokikenichi/codex/tree/main/schelling-sim" target="_blank" rel="noopener noreferrer">
+                <strong>Schelling Segregation Simulator</strong>
+                <span>シェリングの分離モデルをブラウザ上で体験できるシミュレーター。</span>
+              </a>
+              <a class="link-item" href="https://github.com/aokikenichi/aokikenichi/blob/main/FT%E5%9B%B3%E8%A7%A3%E3%81%AE%E8%A8%80%E8%AA%9E.ipynb" target="_blank" rel="noopener noreferrer">
+                <strong>FT図解の言語（Python）</strong>
+                <span>Financial Timesのデータ可視化手法をPythonで再現する試み。</span>
               </a>
               <a class="link-item" href="https://zenn.dev/aokikenichi" target="_blank" rel="noopener noreferrer">
                 <strong>Zenn</strong>
