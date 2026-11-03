@@ -274,6 +274,21 @@
 
     .project-copy .cta{font-weight:800}
 
+
+    /* What's New */
+    .whats-new{padding:64px 0 74px;background:rgba(255,253,249,.55);border-block:1px solid var(--line);scroll-margin-top:90px}
+    .whats-new .section-head{align-items:end;margin-bottom:26px}
+    .news-list{border-top:1px solid var(--ink)}
+    .news-item{display:grid;grid-template-columns:128px minmax(0,1fr) 28px;gap:24px;align-items:center;padding:21px 8px;border-bottom:1px solid var(--line);transition:background .2s}
+    .news-item:hover{background:rgba(255,253,249,.88)}
+    .news-date{font-family:Georgia,"Times New Roman",serif;white-space:nowrap;font-size:.99rem;color:#454c48;font-variant-numeric:tabular-nums}
+    .news-meta{display:block;font-size:.68rem;letter-spacing:.12em;font-weight:800;color:var(--teal);margin-bottom:3px}
+    .news-title{display:block;font-weight:700;line-height:1.5;font-size:1.08rem}
+    .news-desc{display:block;color:var(--muted);font-size:.87rem;margin-top:3px}
+    .news-arrow{font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;color:var(--blue);text-align:center;transition:transform .2s}
+    .news-item:hover .news-arrow{transform:translateX(4px)}
+    .news-foot{margin:18px 8px 0;color:var(--muted);font-size:.81rem}
+
     .visual-band{
       display:grid;
       grid-template-columns:1.3fr .7fr;
@@ -409,6 +424,16 @@
     }
 
     @media(max-width:620px){
+      .whats-new{padding:50px 0 56px}
+      .news-item{grid-template-columns:minmax(0,1fr) 22px;gap:8px;padding:17px 2px}
+      .news-date{grid-column:1/-1;font-size:.83rem}
+      .news-body{grid-column:1}
+      .news-arrow{grid-column:2;grid-row:2;font-size:1.3rem}
+      .news-title{font-size:.99rem}
+      .news-desc{font-size:.82rem}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.news-item,.news-arrow{transition:none}}
+    @media(max-width:620px){
       .hero{padding-top:18px}
       .hero-image{border-radius:18px}
       .hero-image img{aspect-ratio:3/1}
@@ -428,6 +453,7 @@
       <nav aria-label="メインナビゲーション">
         <ul>
           <li><a href="#about">About</a></li>
+          <li><a href="#whats-new">What's New</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#links">Links</a></li>
           <li><a href="https://github.com/aokikenichi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -505,6 +531,66 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="whats-new" id="whats-new" aria-labelledby="whats-new-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Updates / Activity</div>
+            <h2 id="whats-new-title">What's New.</h2>
+          </div>
+          <p>研究、執筆、創作の最近の主な更新。気になるものから、のぞいてみてください。</p>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://aokikenichi.github.io/CRITT/museum/" target="_blank" rel="noopener noreferrer">
+            <time class="news-date" datetime="2026-11-02">2026.11.02</time>
+            <span class="news-body">
+              <span class="news-meta">CRITT / ART</span>
+              <span class="news-title">CRITT Museumと仮想現代美術展を公開</span>
+              <span class="news-desc">クリケットをめぐる10の想像力。「BEYOND THE BOUNDARY」第1期β。</span>
+            </span>
+            <span class="news-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="news-item" href="https://qiita.com/aokikenichi/items/a7ca4591772a973ec52b" target="_blank" rel="noopener noreferrer">
+            <time class="news-date" datetime="2026-11-01">2026.11.01</time>
+            <span class="news-body">
+              <span class="news-meta">QIITA / MATHEMATICS</span>
+              <span class="news-title">「AIと脳科学の数式20」第6話・KLダイバージェンスを公開</span>
+              <span class="news-desc">二つの世界はどれほど違うか。小さな謎から数式を読み解く連載。</span>
+            </span>
+            <span class="news-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="news-item" href="https://note.com/aokikenichi/n/n847db5d32aaf" target="_blank" rel="noopener noreferrer">
+            <time class="news-date" datetime="2026-11-01">2026.11.01</time>
+            <span class="news-body">
+              <span class="news-meta">CRITT / MANGA</span>
+              <span class="news-title">クリケット漫画『Last Over』第10話「最初の一球」を公開</span>
+              <span class="news-desc">クリケットを物語から楽しむオリジナル漫画シリーズ。</span>
+            </span>
+            <span class="news-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="news-item" href="https://github.com/aokikenichi/WorldModels" target="_blank" rel="noopener noreferrer">
+            <time class="news-date" datetime="2026-10-10">2026.10.10</time>
+            <span class="news-body">
+              <span class="news-meta">WORLD MODELS / RESEARCH</span>
+              <span class="news-title">『世界モデル入門』の公開資料を更新</span>
+              <span class="news-desc">基礎、研究史、実装、応用を整理した日本語入門プロジェクト。</span>
+            </span>
+            <span class="news-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="news-item" href="https://github.com/aokikenichi/FrameSwitcherDynamics" target="_blank" rel="noopener noreferrer">
+            <time class="news-date" datetime="2026-08-30">2026.08.30</time>
+            <span class="news-body">
+              <span class="news-meta">AI / SOCIAL SIMULATION</span>
+              <span class="news-title">FrameSwitcherDynamicsを公開</span>
+              <span class="news-desc">危機のフレーミングと変化をLLMエージェントでシミュレーション・可視化。</span>
+            </span>
+            <span class="news-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <p class="news-foot">※ この5件は最近の主な活動を選んだもので、すべての更新履歴ではありません。</p>
       </div>
     </section>
 
